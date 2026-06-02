@@ -1,0 +1,18 @@
+raw_input = input('You: ')
+clean_input = raw_input.lower().strip()
+def process(user_input):
+    responses = {
+    'hello': 'Hi!',
+    'goodbye': 'Bye!',
+    'good morning': 'Good Morning!',
+    'good night': 'Good Night!',
+    'good afternoon': 'Good Afternoon!'
+    }
+    bot_output = responses.get(user_input, "I don't understand")
+    print(f'Bot: {bot_output}, {clean_input}.')
+while True:
+    user_input = input('User: ').lower()
+    if user_input == 'exit':
+      break
+    else:
+      process(user_input)
